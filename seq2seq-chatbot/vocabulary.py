@@ -72,6 +72,8 @@ class Vocabulary(object):
             else:
                 self._word2count[word] = 1
     
+    ## vocab threshold to improve results
+    ## this allows you to remove words not used frequently, making training faster
     def compile(self, vocab_threshold = 1, loading = False):
         """Compile the internal lookup dictionaries that enable words to be integer encoded / decoded.
 
